@@ -8,9 +8,9 @@ function App() {
     <Fragment>
       <Switch>
         <Route path="/" exact>
-          <Redirect to="/signup" />
+          <Redirect to="/" />
         </Route>
-        <Route path="/signup">
+        <Route path="/">
           <SignUp />
         </Route>
         <Route path="/verify">
