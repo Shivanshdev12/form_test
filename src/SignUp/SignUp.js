@@ -34,7 +34,7 @@ const SignUp = () => {
                     <div className="form-side_head">
                         <h2>Registration</h2>
                         <h3>Become a Partner</h3>
-                        <h5>RAMAERA is the future of upcoming Industrialisation in India,aiming presence in all kind of manufacturing sectors</h5>
+                        <p>RAMAERA is the future of upcoming Industrialisation in India,aiming presence in all kind of manufacturing sectors</p>
                     </div>
                 </div>
                 <div className="form-main">

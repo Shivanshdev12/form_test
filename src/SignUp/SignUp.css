@@ -1,9 +1,15 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap');
 
+:root {
+    --text-primary: #fff;
+    --background: #152033;
+}
+
 .form {
     display: flex;
     height: 100vh;
-    background-color: #152033;
+    width: 100vw;
+    background-color: var(--background);
 }
 
 /*** form-side_head ***/
@@ -13,13 +19,14 @@ div.form-side {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    color: #fff;
+    color: var(--text-primary);
     width: 35%;
+    overflow-y: auto;
 }
 
 div.form-side_head h2,
-h3,
-h5 {
+div.form-side_head h3,
+div.form-side_head p {
     padding: 0 3% 0 3%;
 }
 
@@ -31,46 +38,85 @@ div.form-side_head h3 {
 
 
 div.form-side_img img {
+    width: 200px;
     max-width: 100%;
-    /* margin-top: 1.75rem; */
     height: auto;
 }
 
-div.form-side_head h5 {
+div.form-side_head p {
     display: flex;
     flex-wrap: wrap;
-    font-family: 'Roboto', sans-serif;
 }
 
-@media screen and (max-width:425px) {
+@media screen and (max-width: 375px) {
+    div.form-side_img img {
+        width: 100px;
+    }
+
+    div.form-side_head h2 {
+        font-size: small;
+    }
+
+    div.form-side_head h3 {
+        font-size: smaller;
+    }
+
+    div.form-side_head p {
+        font-size: x-small;
+    }
+}
+
+@media (min-width:376px) and (max-width:768px) {
     div.form-side {
         width: 40%;
     }
 
     div.form-side_head h2 {
-        font-size: calc(0.2rem + 70%);
+        font-size: calc(0.20rem + 75%);
+        padding: 2%;
     }
 
     div.form-side_head h3 {
-        font-size: calc(0.2rem + 70%);
+        font-size: calc(0.20rem + 65%);
+        padding: 2%;
     }
 
-    div.form-side_head h2,
-    h3,
-    h5 {
-        padding: 4%;
-    }
-
-    div.form-side_head h5 {
-        font-size: calc(0.2rem + 50%);
+    div.form-side_head p {
+        font-size: calc(0.20rem + 55%);
+        padding: 2%;
     }
 }
 
 @media (min-width:640px) and (max-width:768px) {
     div.form-side_img img {
+        width: 200px;
         max-width: 100%;
         margin-top: 0.2rem;
         height: auto;
+    }
+}
+
+@media (min-width: 769px) {
+    div.form-side_img img {
+        width: 200px;
+        max-width: 100%;
+        margin-top: 0.2rem;
+        height: auto;
+    }
+
+    div.form-side_head h2 {
+        font-size: 1.5rem;
+        padding: 2%;
+    }
+
+    div.form-side_head h3 {
+        font-size: 1.2rem;
+        padding: 2%;
+    }
+
+    div.form-side_head p {
+        font-size: 1rem;
+        padding: 2%;
     }
 }
 
@@ -82,7 +128,7 @@ div.form-main {
     flex-direction: column;
     align-items: flex-start;
     justify-content: center;
-    background-color: #fff;
+    background-color: var(--text-primary);
     width: 65%;
     border-radius: 30px 0px 0px 30px;
 }
@@ -92,6 +138,7 @@ div.form-main_form {
     flex-direction: column;
     margin-top: 3%;
     width: 100%;
+    overflow-y: scroll;
 }
 
 div.form-main_form h2 {
@@ -103,10 +150,20 @@ div.form-main_form h2 {
 div.form-main_form p {
     color: #8692A6;
     margin-top: 0px;
-    padding: 0 0 1% 3%;
+    padding: 0 0 2% 3%;
 }
 
-@media screen and (max-width:425px) {
+@media screen and (max-width:375px) {
+    div.form-main_form h2 {
+        font-size: small;
+    }
+
+    div.form-main_form p {
+        font-size: x-small;
+    }
+}
+
+@media (min-width:376px) and (max-width:768px) {
     div.form-main_form h2 {
         font-size: calc(0.2rem + 70%);
     }
@@ -153,17 +210,18 @@ form button {
     font-family: 'Poppins', sans-serif;
     border: none;
     border-radius: 8px;
-    color: #fff;
+    color: var(--text-primary);
 }
 
 .submit {
-    color: #fff;
+    color: var(--text-primary);
     text-decoration: none;
 }
 
 
 @media screen and (max-width:425px) {
     form button {
-        font-size: calc(10px + 1%);
+        width: 36%;
+        font-size: x-small;
     }
 }
